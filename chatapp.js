@@ -1,9 +1,14 @@
 window.addEventListener("DOMContentLoaded",() => {
+    setInterval(()=>{
     
     axios.get("http://localhost:8000/message")
     .then(res => {
         console.log(res.data)
         const info = res.data
+        const messagelist = document.getElementById("messagelist")
+        if(messagelist!= null){
+            messagelist.innerHTML=null
+        }
         
           showNewUserOnScreen(info)
     //     for(let i=0;i<res.data.messages.length;i++){
@@ -20,6 +25,7 @@ window.addEventListener("DOMContentLoaded",() => {
     // }
     })
 .catch(err => console.log(err))
+    },1000)
 
 })
 
@@ -50,6 +56,7 @@ function messages(event){
 function showNewUserOnScreen(info){
     for(let i=0;i<info.messages.length;i++){
         const messagelist = document.getElementById("messagelist")
+       
         const usermessage = document.createElement("li")
         const username = info.messages[i].username
         //console.log(username)
