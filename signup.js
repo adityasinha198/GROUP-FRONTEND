@@ -16,7 +16,7 @@ function onSubmit(event){
     .then(res=>{
         console.log(res)
     }).catch(err=>{
-        if(err.response.status==406){
+        if(err.response.status==200){
             alert("User created")
         }
         if(err.response.status==404){
