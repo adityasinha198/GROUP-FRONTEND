@@ -15,10 +15,12 @@ function onSubmit(event){
     axios.post("http://localhost:8000/signUp",obj)
     .then(res=>{
         console.log(res)
-    }).catch(err=>{
-        if(err.response.status==200){
+        if(res.status==200){
             alert("User created")
         }
+        console.log(res)
+    }).catch(err=>{
+        
         if(err.response.status==404){
             alert("Emailid already exists")
         }
