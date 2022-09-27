@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN PAGE</title>
+
+</head>
+<body style="background-image:url('https://media.istockphoto.com/photos/siberian-husky-runs-on-fresh-snow-picture-id505772134') ">
+
+    <div style="background-image: url('https://cdn.pixabay.com/photo/2019/05/10/13/21/husky-4193503_1280.jpg');text-align: center;border: 1px solid black ;width:50% ;margin-left: 20%;background-color: chocolate;">
+    <form onsubmit="login(event)" id="myForm" method="post" style="padding-top: 0.5cm;padding-left: 1cm;padding-bottom:1cm;text-align:justify;color:  rgb(153, 51, 51);">
+        
+        <label for="emailid">EmailID: </lable><br>
+        <input  type="email" id="emailid" name="emailid" required title="Enter your EmailID"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required title="Enter your Password"><br><br>
+        <button type="submit" id="btn"  >LOGIN</button><br><br>
+        <a href="./signup.html" style="color: rgb(153, 51, 51);text-decoration:none">NEW USER SIGNUP</a>
+        </form>
+        
+    </div>
+        
+
+
+        <ul id="formList"></ul>
+
+       
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+    <script src="login.js"></script>
+</body>
+    
+</html>
