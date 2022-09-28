@@ -19,7 +19,7 @@ function login(event){
         //localStorage.setItem('ispremiumuser',ispremiumuser)
         
         alert("Logged in successfully")
-        //location.replace('/expense.html')
+        location.replace('/chatapp.html')
     })
     .catch(err=>{
         if(err.response.status==404){
