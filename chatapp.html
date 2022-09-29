@@ -6,11 +6,26 @@
     <h1 style="text-align:center">Chat App</h1>
 </head>
 <body>
-    <ul id="messagelist"></ul>
-    <div style="text-align:center">
-    <form onsubmit = "messages(event)" style="position: fixed;bottom: 0px;">
-        <input type="text"  id="message" name="message"> 
-        <button type="submit">Send</button>
+    <div id="nochat" style="text-align:center "></div>
+    
+    
+    
+    <div style="text-align: right;"><button  ><a href="./group.html" style="text-decoration: none;"> Create Group</a></button></div>
+    <div style="float: left;" id="displaygroup"></div>
+    <ul id="grouplist" style="text-decoration: none;float: left;"></ul>
+    
+    <div style="text-align: center;border: 1px solid black;margin-left: 8cm;margin-right: 8cm;">
+    <ul id="messagelist" style="text-align: center;list-style-type:none"></ul>
+</div>
+    
+   
+    
+    <div style="text-align:center" >
+      
+    
+    <form onsubmit = "messages(event)" style="position: fixed;bottom: 30px;float: right;margin-left: 13cm ;">
+        <input type="text"  id="message" name="message" style="float:right;width: 7cm;"> 
+        <button type="submit" style="margin-right:0.2cm ;">Send:</button>
     </form>
 </div> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
